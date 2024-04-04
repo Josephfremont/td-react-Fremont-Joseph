@@ -48,9 +48,9 @@ function TaskList({textValidate}) {
 
     return (
         <>
-            <button onClick={filterAll}>All</button>
-            <button onClick={filterComplete}>Complétée</button>
-            <button onClick={filterNonComplete}>Non complétée</button>
+            <button onClick={filterAll} data-cy="filter-btn-all">All</button>
+            <button onClick={filterComplete} data-cy="filter-btn-done">Complétée</button>
+            <button onClick={filterNonComplete} data-cy="filter-btn-undone">Non complétée</button>
             {
                 listElement.length > 0 && listElement.map((element, index) => {
                     return (

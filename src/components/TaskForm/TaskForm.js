@@ -31,12 +31,12 @@ function TaskForm({textValidate, setTextValidate}) {
     
 
     return (
-        <>
+        <div data-cy="task-form">
             <input type="text" value={textInputData} data-cy="task-input" onChange={(e) => setTextInputData(e.target.value)}/>
             <button onClick={() => setTextValidate(textInputData)} data-cy="add-task-btn">Save</button>
 
 
-        </>
+        </div>
     );
 }
 
