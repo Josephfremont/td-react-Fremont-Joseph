@@ -9,13 +9,13 @@
 }
 
 .notCompleted:hover{
-    color: #63cc63;
+    color: #fc5858;
 }
 
 .completed{
-    font-weight: normal;
+    font-weight: lighter;
 }
 
 .completed:hover{
-    color: #fc5858;
+    color: #63cc63;
 }
