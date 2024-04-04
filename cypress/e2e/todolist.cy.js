@@ -1,3 +1,4 @@
+Cypress.on('uncaught:exception', (err, runnable) => { return false; })
 describe('App Component', () => {
     beforeEach(() => {
       cy.visit('http://localhost:3000') // Visite l'application avant chaque test

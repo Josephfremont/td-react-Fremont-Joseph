@@ -1,0 +1,21 @@
+.listItem{
+    margin-top: 5%;
+    list-style: none;
+    font-size: 20px;
+}
+
+.notCompleted{
+    font-weight: bold;
+}
+
+.notCompleted:hover{
+    color: #63cc63;
+}
+
+.completed{
+    font-weight: normal;
+}
+
+.completed:hover{
+    color: #fc5858;
+}

@@ -7,22 +7,27 @@ function TaskForm({textValidate, setTextValidate}) {
     useEffect(() => {
         // debugger;
         // console.log(textValidate);
-        let oldElement = localStorage.getItem( "elements" );
-        console.log(oldElement);
+        let oldElement = [];
+        oldElement = localStorage.getItem( "tasks" );
         // const oldElement = JSON.parse(localStorage.getItem( "elements" ));
         if(oldElement){
             oldElement = JSON.parse(oldElement);
+            console.log(oldElement)
         }
+        else {
+            oldElement = []
+        }
+        console.log(oldElement);
         
         if(textValidate.length > 0){
 
             // true : completee
             // false : nocomplete
-            let elements = [...oldElement, {text: textValidate, statut:"nocomplete"}];
+            let elements = [...oldElement, {text: textValidate, statut:"nocomplete", index: oldElement.length}];
             
             const stringifiedInterests = JSON.stringify(elements);
             localStorage.setItem(
-                "elements",
+                "tasks",
                 stringifiedInterests
             )
         }
@@ -32,8 +37,15 @@ function TaskForm({textValidate, setTextValidate}) {
 
     return (
         <div data-cy="task-form">
+
             <input type="text" value={textInputData} data-cy="task-input" onChange={(e) => setTextInputData(e.target.value)}/>
-            <button onClick={() => setTextValidate(textInputData)} data-cy="add-task-btn">Save</button>
+            <button onClick={() => { 
+                    setTextValidate(textInputData);
+                    setTextInputData("");
+                }} 
+                data-cy="add-task-btn">
+                    Save
+            </button>
 
 
         </div>
