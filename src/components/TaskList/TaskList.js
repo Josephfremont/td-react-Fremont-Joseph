@@ -54,7 +54,7 @@ function TaskList({textValidate}) {
             {
                 listElement.length > 0 && listElement.map((element, index) => {
                     return (
-                        <li key={index} onClick={() => changeStatut(element.text,element.statut,index)}>
+                        <li key={index} onClick={() => changeStatut(element.text,element.statut,index)} data-cy="task-item">
                             {element.text}
                             { element.statut == "completee" ? 
                                 <FaCheck color="green"/> : 

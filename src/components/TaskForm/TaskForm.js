@@ -32,8 +32,8 @@ function TaskForm({textValidate, setTextValidate}) {
 
     return (
         <>
-            <input type="text" value={textInputData} onChange={(e) => setTextInputData(e.target.value)}/>
-            <button onClick={() => setTextValidate(textInputData)}>Save</button>
+            <input type="text" value={textInputData} data-cy="task-input" onChange={(e) => setTextInputData(e.target.value)}/>
+            <button onClick={() => setTextValidate(textInputData)} data-cy="add-task-btn">Save</button>
 
 
         </>
